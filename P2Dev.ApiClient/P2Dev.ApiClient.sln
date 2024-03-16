@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2Dev.ApiClient", "P2Dev.ApiClient\P2Dev.ApiClient.csproj", "{08268CFA-312A-4536-9501-722826DBE414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2Dev.ApiClient.Cognito", "P2Dev.ApiClient.Cognito\P2Dev.ApiClient.Cognito.csproj", "{113C0406-7E6D-4500-87E3-901E9F9D3A9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08268CFA-312A-4536-9501-722826DBE414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08268CFA-312A-4536-9501-722826DBE414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08268CFA-312A-4536-9501-722826DBE414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08268CFA-312A-4536-9501-722826DBE414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{113C0406-7E6D-4500-87E3-901E9F9D3A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113C0406-7E6D-4500-87E3-901E9F9D3A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113C0406-7E6D-4500-87E3-901E9F9D3A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113C0406-7E6D-4500-87E3-901E9F9D3A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E26822B4-BBD3-4177-AE1F-5DA7D3473CFB}
+	EndGlobalSection
+EndGlobal

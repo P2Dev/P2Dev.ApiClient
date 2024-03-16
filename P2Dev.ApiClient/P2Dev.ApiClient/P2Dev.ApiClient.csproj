@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>P2Dev.ApiClient</Title>
+    <Company>P2.Dev</Company>
+	<Version>0.1.0</Version>
+	<Authors>Paul Demers</Authors>
+	<Description>This library provides the standard ApiClient for P2.Dev projects.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/P2Dev/P2Dev.ApiClient</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/P2Dev/P2Dev.ApiClient</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

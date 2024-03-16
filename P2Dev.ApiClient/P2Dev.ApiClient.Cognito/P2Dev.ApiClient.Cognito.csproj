@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Version>0.1.0</Version>
+	  <Title>P2Dev.ApiClient.Cognito</Title>
+	  <Company>P2.Dev</Company>
+	  <Description>This package provides an AWS Cognito User Pools token interface for the P2Dev.ApiClient</Description>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/P2Dev/P2Dev.ApiClient</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/P2Dev/P2Dev.ApiClient</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.5.2" />
+    <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.7.303.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P2Dev.ApiClient\P2Dev.ApiClient.csproj" />
+  </ItemGroup>
+
+</Project>
