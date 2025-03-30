@@ -16,6 +16,7 @@ namespace P2Dev.ApiClient.Cognito
     {
         Unknown,
         Ok,
+        InvalidCode,
         PasswordChangeRequred,
         SignupOk,
         NotAuthorized,
@@ -275,6 +276,11 @@ namespace P2Dev.ApiClient.Cognito
                 await user.ConfirmForgotPasswordAsync(code, newpass);
                 
                 return new CognitoContext(CognitoResult.Ok);
+            }
+            catch (CodeMismatchException cme)
+            {
+                Debug.WriteLine(cme.Message);
+                return new CognitoContext(CognitoResult.InvalidCode);
             }
             catch(ExpiredCodeException ece)
             {

@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>P2Dev.ApiClient</Title>
     <Company>P2.Dev</Company>
-	<Version>0.1.1</Version>
+	<Version>0.1.2</Version>
 	<Authors>Paul Demers</Authors>
 	<Description>This library provides the standard ApiClient for P2.Dev projects.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
