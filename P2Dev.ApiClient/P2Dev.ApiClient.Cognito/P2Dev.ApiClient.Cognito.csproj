@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>disable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <Version>0.1.0</Version>
+	  <Version>0.1.1</Version>
 	  <Title>P2Dev.ApiClient.Cognito</Title>
 	  <Company>P2.Dev</Company>
 	  <Description>This package provides an AWS Cognito User Pools token interface for the P2Dev.ApiClient</Description>

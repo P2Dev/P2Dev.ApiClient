@@ -14,6 +14,19 @@ namespace P2Dev.ApiClient
         public ITokenProvider TokenProvider { get; set; }
         public string BaseURL { get; set; }
 
+        public Token Tokens
+        {
+            get
+            {
+                return TokenProvider?.Tokens;
+            }
+
+            set
+            {
+                TokenProvider.Tokens = value;
+            }
+        }
+
         public ApiClientBase()
         {
         }
@@ -68,8 +81,25 @@ namespace P2Dev.ApiClient
             return Task.FromResult(hrm);
         }
 
+        /// <summary>
+        /// Send a request.
+        /// </summary>
+        /// <param name="method">Http method to invoke the request, typically GET, POST, PUT, DELETE</param>
+        /// <param name="url">If the url does not begin with http:// or https:// the BaseUrl will be prepended to the supplied url</param>
+        /// <param name="body">Optional request body, sent as json</param>
+        /// <param name="authRetry">Automatically attempt to refresh the auth token on a 401 before throwing a NoTokenException</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="NoTokenException">401, request did not have a valid JWT in the Authorization header. See authRetry.</exception>
+        /// <exception cref="NotFoundException">404, the server returned a 404</exception>
+        /// <exception cref="NeedSetupException">412, indicates the user's account needs setup</exception>
+        /// <exception cref="ServerSideException">500, the server returned a 500</exception>
+        /// <exception cref="RestException">All other error response codes will trigger a rest exception</exception>
         public async Task<T> SendAsync<T>(HttpMethod method, string url, object body = null, bool authRetry = true)
         {
+            if (!url.ToLower().StartsWith("http://") && !url.ToLower().StartsWith("https://"))
+                url = GenURL(url);
+            
             HttpRequestMessage req = new HttpRequestMessage(method, url);
 
             if (TokenProvider?.Tokens != null && TokenProvider?.Tokens.ID != null)
